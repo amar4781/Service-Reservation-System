@@ -25,14 +25,18 @@
                         <div class="mb-3">
                             <label>Name</label>
                             <input type="text" name="name" class="form-control" id="name" >
+                            @error("name") <p class="text-danger">{{ $message }}</p> @enderror
+
                         </div>
                         <div class="mb-3">
                             <label>Email</label>
                             <input type="email" name="email" class="form-control" id="email" >
+                            @error("email") <p class="text-danger">{{ $message }}</p> @enderror
                         </div>
                         <div class="mb-3">
                             <label>Password</label>
                             <input type="password" name="password" class="form-control" id="password" >
+                            @error("password") <p class="text-danger">{{ $message }}</p> @enderror
                         </div>
                         <div class="mb-3">
                             <button type="submit" name="register" class="btn btn-primary">Register</button>
